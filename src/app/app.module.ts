@@ -3,23 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TreeNodeComponent } from './tree-node/tree-node.component';
 
 import {FormsModule} from "@angular/forms";
 import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ImageSequenceAnimatorComponent } from './image-sequence-animator/image-sequence-animator.component';
-import { TimelineComponent } from './timeline/timeline.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeNodeComponent,
     LeftSidebarComponent,
-    ImageSequenceAnimatorComponent,
-    TimelineComponent
   ],
   imports: [
     BrowserModule,

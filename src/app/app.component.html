@@ -1,8 +1,5 @@
-<app-left-sidebar></app-left-sidebar>
-
-<div style="margin-left: 120px; margin-top:0;">
-  <!-- <app-timeline></app-timeline> -->
-  <app-tree-node></app-tree-node>
+<div *ngIf="showSidebar">
+  <app-left-sidebar></app-left-sidebar>
 </div>
 
 <router-outlet></router-outlet>

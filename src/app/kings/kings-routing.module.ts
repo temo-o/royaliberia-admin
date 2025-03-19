@@ -1,10 +1,17 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
+import { kingsComponent } from "./kings.component";
+import { NgModel } from "@angular/forms";
+import { NgModule } from "@angular/core";
 
-const routes: Routes = [];
+const routes: Routes = [
+    {
+        path: 'kings',
+        component: kingsComponent
+    }
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class KingsRoutingModule { }
+export class kingsRoutingModule {}

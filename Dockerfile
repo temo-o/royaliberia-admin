@@ -15,6 +15,6 @@ RUN npm install
 # Copy the rest of the app
 COPY . /app
 
-EXPOSE 4200
+EXPOSE 4400
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4400"]

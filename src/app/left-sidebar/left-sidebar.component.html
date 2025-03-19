@@ -1,6 +1,6 @@
 <div class="left-sidebar-wrapper">
   <ul class="left-sidebar">
     <li>≡</li>
-    <li *ngFor="let navItem of navData">{{navItem.label}}</li>
+    <li *ngFor="let navItem of navData"><a [routerLink]="navItem.routeLink">{{navItem.label}}</a></li>
   </ul>
 </div>
