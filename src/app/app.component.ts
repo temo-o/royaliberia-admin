@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit
   }
 
   constructor(private router: Router) {
-    this.router.events.subscribe(() => {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
       console.log(this.router.url);
       this.showSidebar = !this.router.url.includes('/login');
     });

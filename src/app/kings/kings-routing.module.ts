@@ -1,12 +1,16 @@
 import { RouterModule, Routes } from "@angular/router";
 import { kingsComponent } from "./kings.component";
-import { NgModel } from "@angular/forms";
 import { NgModule } from "@angular/core";
+import { kingsAddComponent } from "./kings-add.component";
 
 const routes: Routes = [
     {
-        path: 'kings',
+        path: '',
         component: kingsComponent
+    },
+    {
+        path: 'add',
+        component: kingsAddComponent
     }
 ];
 

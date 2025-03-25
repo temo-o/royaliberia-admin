@@ -35,9 +35,7 @@ export class LoginComponent {
       next: (response) =>{
         this.jwtService.setToken(response.token);
 
-        if(this.jwtService.isAdmin()){
-          this.jwtService.storeToken();
-        }
+        this.jwtService.storeToken();
 
         this.jwt = response.token;
         console.log(this.jwt);

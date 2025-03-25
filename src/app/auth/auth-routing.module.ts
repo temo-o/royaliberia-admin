@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { emptyRouteGuard } from '../guards/empty-route.guard';
 
 const routes: Routes = [
     { 
-        path: 'login', 
-        component: LoginComponent
+        path: '',
+        children: [
+          {
+            path: 'login',
+            component: LoginComponent
+          }
+        ],
+        canActivate: [emptyRouteGuard]
     }
 ];
 
